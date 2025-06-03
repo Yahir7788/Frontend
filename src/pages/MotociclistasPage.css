@@ -1,0 +1,230 @@
+/* General body/page style (if not set globally) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.motociclistas-page {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.motociclistas-page h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.motociclistas-page h2 {
+  color: #34495e;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* --- Button General Styling --- */
+.motociclistas-page button,
+.motociclista-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease;
+  margin-right: 8px; /* Default margin for buttons next to each other */
+}
+.motociclistas-page button:last-child,
+.motociclista-form button:last-child {
+  margin-right: 0;
+}
+
+.motociclistas-page button:hover,
+.motociclista-form button:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.motociclistas-page button:disabled,
+.motociclista-form button:disabled {
+  background-color: #bdc3c7 !important; /* Important to override specific styles */
+  color: #7f8c8d !important;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+/* Add Motociclista Button (main page) */
+.add-button {
+  background-color: #27ae60; /* Greener */
+  color: white;
+  margin-bottom: 20px;
+  display: block; /* Make it block to center it if needed or control width */
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 200px; /* Ensure it's a decent size */
+}
+.add-button:hover {
+  background-color: #229954;
+}
+
+/* --- Table Styling --- */
+.motociclistas-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.motociclistas-page th,
+.motociclistas-page td {
+  border: 1px solid #e0e0e0; /* Lighter border */
+  padding: 12px 15px; /* More padding */
+  text-align: left;
+  vertical-align: middle;
+}
+
+.motociclistas-page th {
+  background-color: #3498db; /* Blue header */
+  color: white;
+  font-weight: bold;
+}
+
+.motociclistas-page tr:nth-child(even) {
+  background-color: #f9f9f9; /* Zebra striping */
+}
+.motociclistas-page tr:hover {
+  background-color: #f1f1f1; /* Hover effect on rows */
+}
+
+/* Table action buttons */
+.motociclistas-page td button.edit-button {
+  background-color: #f39c12; /* Orange */
+  color: white;
+}
+.motociclistas-page td button.edit-button:hover {
+  background-color: #e67e22;
+}
+
+.motociclistas-page td button.delete-button {
+  background-color: #e74c3c; /* Red */
+  color: white;
+}
+.motociclistas-page td button.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* --- Form Styling --- */
+.motociclista-form {
+  background-color: #ecf0f1; /* Light grey background for form */
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border: 1px solid #bdc3c7;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.motociclista-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.motociclista-form div {
+  margin-bottom: 15px; /* More spacing between form fields */
+}
+
+.motociclista-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.motociclista-form input[type="text"] {
+  width: calc(100% - 24px); /* Adjusted for padding */
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 1em;
+}
+.motociclista-form input[type="text"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+/* Form-specific button colors */
+.add-form button[type="submit"] {
+  background-color: #2ecc71; /* Emerald Green */
+  color: white;
+}
+.add-form button[type="submit"]:hover {
+  background-color: #27ae60;
+}
+
+.edit-form button[type="submit"] {
+  background-color: #f39c12; /* Orange - consistent with table edit button */
+  color: white;
+}
+.edit-form button[type="submit"]:hover {
+  background-color: #e67e22;
+}
+
+.motociclista-form button[type="button"] { /* Cancel button */
+  background-color: #95a5a6; /* Asbestos Grey */
+  color: white;
+}
+.motociclista-form button[type="button"]:hover {
+  background-color: #7f8c8d;
+}
+
+/* --- Feedback Messages --- */
+.motociclistas-page .loading-message,
+.motociclistas-page .error-message,
+.motociclistas-page .info-message,
+.motociclistas-page .processing-message {
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.motociclistas-page .loading-message {
+  background-color: #e0f7fa; /* Light cyan */
+  border: 1px solid #b2ebf2;
+  color: #00796b;
+}
+
+.motociclistas-page .error-message {
+  background-color: #ffebee; /* Light pink */
+  border: 1px solid #ffcdd2;
+  color: #c62828;
+}
+
+.motociclistas-page .info-message { /* For "No hay motociclistas" */
+  background-color: #e3f2fd; /* Light blue */
+  border: 1px solid #bbdefb;
+  color: #0d47a1;
+}
+
+.motociclistas-page .processing-message {
+    background-color: #fff9c4; /* Light yellow */
+    border: 1px solid #fff176;
+    color: #f57f17;
+}
+
+/* Specific error for form validation (if needed, but global .error-message might cover it) */
+.motociclista-form .form-error-message {
+  color: #c0392b; /* Similar to main error but perhaps smaller/inline */
+  font-size: 0.9em;
+  margin-bottom:10px;
+  text-align: center; /* Center form errors as well */
+}
